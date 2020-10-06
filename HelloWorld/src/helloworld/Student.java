@@ -1,5 +1,4 @@
-
-package hellofriends;
+package helloworld;
 
 /**
  *
@@ -8,7 +7,7 @@ package hellofriends;
 public class Student 
 {
     private static int counter;
-    private String id;
+    private String id; // 1.private  2.public  3.protective === access modifiers.
     private String name;
     private int batch;
     private String programme;
@@ -30,10 +29,15 @@ public class Student
         this.batch = batch;
         this.section = section;
         this.status = false;
-        System.out.println(counter+ ".This is a Student information System.");
+        System.out.println(counter + ". This is a Student information System.");
         if(!this.status)
         {
-            
+            System.out.println("This is a regular Student..!");
+        }
+        else
+        {
+            System.out.println("This Student has been passed out..!");
+        }
     }
     
     public void Student() //void method returns empty.
@@ -68,8 +72,12 @@ public class Student
         return batch;
     }
     
-    public int getProgramme()
+    public void display()
     {
+        System.out.println("The information of: "  + this.getId()+":");
+        System.out.println("Programme:" + this.getName());
+        System.out.println("Batch:" + this.getBatch());
         
     }
+    
 }

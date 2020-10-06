@@ -11,11 +11,13 @@ public class HelloFriends
         //my code goes here.....
         System.out.println("Welcome to the world of java!\n");
      
-        Student student = new Student(); //constractor.
+        Student student = new Student(); //constructor.
         student.setId("191-115-063");
         System.out.println("The ID is :"+student.getId());
         
         Student s10 = new Student();
+        
+        Student s3 = new Student("CSE",47,"A");
         
         Student theirname = new Student();
         theirname.setName("Tanjina Ahmed Mumu"); //string dile quotation mark lagbe

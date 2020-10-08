@@ -7,7 +7,9 @@ package hellofriends;
  */
 public class Student 
 {
-    private static int counter;
+    private static int counter; //static keyword==class variable
+    
+    //instance variable
     private String id;
     private String name;
     private int batch;
@@ -29,18 +31,33 @@ public class Student
         this.programme = programme;
         this.batch = batch;
         this.section = section;
-        this.status = false;
+        this.status = true;
         System.out.println(counter+ ".This is a Student information System.");
         if(!this.status)
         {
-            
+            System.out.println("This is a regular student..!");
+        }
+        else
+        {
+            System.out.println("This student has beeen passed out..!");
+        }
     }
     
-    public void Student() //void method returns empty.
+    /*public void Student() //void method returns empty.
     {
         System.out.println("This is a Student information System.");
-    } 
-        
+    }*/
+    
+    public Student(String programme,int batch,boolean status)
+    {
+        counter++;
+        this.programme = programme;
+        this.batch = batch;
+        this.status = true;
+        System.out.println(counter+ ".This is a Student information System.");
+    }       
+    
+    //Id method
     public void setId(String id)
     {
         this.id = id;
@@ -50,6 +67,7 @@ public class Student
         return id;
     }
     
+    //name method
     public void setName(String name)
     {
         this.name = name;
@@ -59,6 +77,7 @@ public class Student
         return name;
     }
     
+    //batch method
     public void setBatch(int batch)
     {
         this.batch = batch;
@@ -68,8 +87,53 @@ public class Student
         return batch;
     }
     
-    public int getProgramme()
+    //programme method
+    public void setProgramme(String programme)
     {
-        
+        this.programme=programme;
+    }
+    public String getProgramme()
+    {
+        return programme;
+    }
+    
+    //section method
+    public void setSection(char section)
+    {
+        this.section=section;
+    }
+    public char getSection()
+    {
+        return section;
+    }
+    
+    //date of birth method
+    public void setDob(String dob)
+    {
+        this.dob=dob;
+    }
+    public String getDob()
+    {
+        return dob;
+    }
+    
+    //bloodGroup method
+    public void setbloodGroup(String bloodGroup)
+    {
+        this.bloodGroup=bloodGroup;
+    }
+    public String getbloodGroup()
+    {
+        return bloodGroup;
+    }
+    
+    //status method
+    public void setstatus(boolean status)
+    {
+        this.status=status;
+    }
+    public boolean getstatus()
+    {
+        return status;
     }
 }

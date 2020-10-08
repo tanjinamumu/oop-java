@@ -6,15 +6,15 @@ package helloworld;
  */
 public class Student 
 {
-    private static int counter;
+    public static int counter;
     private String id; // 1.private  2.public  3.protective === access modifiers.
     private String name;
     private int batch;
     private String programme;
     private char section;
     private String dob;
-    private String bloodGroup;
-    private boolean status; //1 for regular - 0 for irregular
+    public String bloodGroup;
+    public boolean status; //1 for regular - 0 for irregular
     
     public Student() //constructor name is class name
     {
@@ -28,7 +28,7 @@ public class Student
         this.programme = programme;
         this.batch = batch;
         this.section = section;
-        this.status = false;
+        this.status = true;
         System.out.println(counter + ". This is a Student information System.");
         if(!this.status)
         {
@@ -40,11 +40,20 @@ public class Student
         }
     }
     
-    public void Student() //void method returns empty.
+    /*public void Student() //void method returns empty.
     {
         System.out.println("This is a Student information System.");
-    } 
-        
+    }*/
+    
+    public Student(String programme,int batch,boolean status)
+    {
+        counter++;
+        this.programme = programme;
+        this.batch = batch;
+        this.status = false;
+        System.out.println(counter + ". This is a Student information System.");
+    }   
+    //Id method
     public void setId(String id)
     {
         this.id = id;
@@ -54,6 +63,7 @@ public class Student
         return id;
     }
     
+    //name method
     public void setName(String name)
     {
         this.name = name;
@@ -63,6 +73,7 @@ public class Student
         return name;
     }
     
+    //batch method
     public void setBatch(int batch)
     {
         this.batch = batch;
@@ -72,12 +83,62 @@ public class Student
         return batch;
     }
     
+    //programme method
+    public void setProgramme(String programme)
+    {
+        this.programme=programme;
+    }
+    public String getProgramme()
+    {
+        return programme;
+    }
+    
+    //section method
+    public void setSection(char section)
+    {
+        this.section=section;
+    }
+    public char getSection()
+    {
+        return section;
+    }
+    
+    //date of birth method
+    public void setDob(String dob)
+    {
+        this.dob=dob;
+    }
+    public String getDob()
+    {
+        return dob;
+    }
+    
+    //bloodGroup method
+    public void setbloodGroup(String bloodGroup)
+    {
+        this.bloodGroup=bloodGroup;
+    }
+    public String getbloodGroup()
+    {
+        return bloodGroup;
+    }
+    
+    //status method
+    public void setstatus(boolean status)
+    {
+        this.status=status;
+    }
+    public boolean getstatus()
+    {
+        return status;
+    }
+    
     public void display()
     {
-        System.out.println("The information of: "  + this.getId()+":");
+        System.out.println("The information of: "  + this.getId()+ ":");
         System.out.println("Programme:" + this.getName());
         System.out.println("Batch:" + this.getBatch());
-        
+        System.out.println("Section:" + this.getSection());
     }
     
 }
